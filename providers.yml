@@ -1,0 +1,87 @@
+usgs:
+  type: stac
+  search_url: https://landsatlook.usgs.gov/stac-server/search
+  products:
+    - "landsat-c2l2-sr"
+    - "landsat-c2l2-st"
+    - "landsat-c2ard-st"
+    - "landsat-c2l2alb-bt"
+    - "landsat-c2l3-fsca"
+    - "landsat-c2ard-bt"
+    - "landsat-c2l1"
+    - "landsat-c2l3-ba"
+    - "landsat-c2l2alb-st"
+    - "landsat-c2ard-sr"
+    - "landsat-c2l2alb-sr"
+    - "landsat-c2l2alb-ta"
+    - "landsat-c2l3-dswe"
+    - "landsat-c2ard-ta"
+  param_mapping:
+    # STAC-key : Provider-key
+    collections: collections
+    bbox: bbox
+    datetime: datetime
+    limit: limit
+    page: page
+
+cdse:
+  type: stac
+  search_url: https://stac.dataspace.copernicus.eu/v1/search
+  products:
+    - "sentinel-3-sl-2-aod-nrt"
+    - "sentinel-1-mosaic"
+    - "sentinel-1-grd"
+    - "sentinel-3-olci-2-wfr-nrt"
+    - "sentinel-2-l2a"
+  param_mapping:
+    # STAC-key : Provider-key
+    collections: collections
+    bbox: bbox
+    datetime: datetime
+    limit: limit
+    page: page
+
+dlr_stac:
+  type: stac
+  search_url: https://geoservice.dlr.de/eoc/ogc/stac/v1/search?f=application%2Fgeo%2Bjson
+  products:
+    - "D4H"
+    - "S2_L2A_MAJA"
+    - "S2_L3A_WASP"
+
+  param_mapping:
+    # STAC-key : Provider-key
+    collections: collections
+    bbox: bbox
+    datetime: datetime
+    limit: limit
+    page: page
+
+
+eodc_csw:
+  type: csw
+  search_url: https://csw.eodc.eu
+  products:
+    - csw:Record
+  param_mapping:
+    collections: None
+    bbox:        bbox
+    limit:       maxRecords
+    page:        startPosition
+
+
+
+
+#dlr_csw:
+#  type: csw
+#  search_url: https://geoservice.dlr.de/catalogue/srv/eng/csw
+#  products:
+#  - None # CSW liefert “Records”, nicht Collections
+#  param_mapping:
+#    bbox:        bbox
+#    datetime:    datetime
+#    limit:       maxRecords
+#    page:        startPosition
+#    typeNames:   typeNames
+
+
