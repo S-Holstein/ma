@@ -41,7 +41,7 @@ cdse:
     limit: limit
     page: page
 
-dlr_stac:
+dlr:
   type: stac
   search_url: https://geoservice.dlr.de/eoc/ogc/stac/v1/search?f=application%2Fgeo%2Bjson
   products:

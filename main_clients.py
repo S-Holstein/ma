@@ -1,7 +1,7 @@
 from pystac_client import Client
 
 # Erstelle einen STAC-Client für Deinen Gateway
-# catalog_url = "http://localhost:8000"  # Dein Gateway
+# catalog_url = "http://localhost:8080"  # Dein Gateway
 # catalog_url = "https://landsatlook.usgs.gov/stac-server/"
 catalog_url = "https://stac.dataspace.copernicus.eu/v1/"
 client = Client.open(catalog_url)
